@@ -14,6 +14,6 @@
 
 terraform {
   backend "gcs" {
-    bucket = "PROJECT_ID-tfstate-dev"
+    bucket = "autodq-colonial-pipeline-demo-tfstate-dev"
   }
 }
