@@ -96,4 +96,3 @@ steps:
 
 options:
   serviceAccount: "projects/autodq-colonial-pipeline-demo/serviceAccounts/632144349965@cloudbuild.gserviceaccount.com"
-  logsBucket: "gs://autodq-colonial-logs"
