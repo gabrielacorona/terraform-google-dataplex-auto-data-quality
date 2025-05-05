@@ -23,9 +23,7 @@ steps:
       echo "***********************"
       echo "${BRANCH_NAME}"
       echo "***********************"
-  options:
-    serviceAccount: 'projects/your-project-id/serviceAccounts/your-service-account@your-project-id.iam.gserviceaccount.com'
-  logsBucket: 'gs://your-logs-bucket-name'
+
 
 # [START tf-init]
 - id: 'tf init'
