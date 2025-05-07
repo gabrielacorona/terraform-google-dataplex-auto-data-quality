@@ -1,47 +1,87 @@
 [
   {
     "mode": "NULLABLE",
-    "name": "order_id",
+    "name": "age",
     "type": "INTEGER"
   },
   {
     "mode": "NULLABLE",
-    "name": "user_id",
-    "type": "INTEGER"
-  },
-  {
-    "mode": "NULLABLE",
-    "name": "status",
+    "name": "job",
     "type": "STRING"
   },
   {
     "mode": "NULLABLE",
-    "name": "gender",
+    "name": "marital",
     "type": "STRING"
   },
   {
     "mode": "NULLABLE",
-    "name": "created_at",
-    "type": "TIMESTAMP"
+    "name": "education",
+    "type": "STRING"
   },
   {
     "mode": "NULLABLE",
-    "name": "returned_at",
-    "type": "TIMESTAMP"
+    "name": "default",
+    "type": "BOOL"
   },
   {
     "mode": "NULLABLE",
-    "name": "shipped_at",
-    "type": "TIMESTAMP"
-  },
-  {
-    "mode": "NULLABLE",
-    "name": "delivered_at",
-    "type": "TIMESTAMP"
-  },
-  {
-    "mode": "NULLABLE",
-    "name": "num_of_item",
+    "name": "balance",
     "type": "INTEGER"
-  }
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "housing",
+    "type": "BOOL"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "loan",
+    "type": "BOOL"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "contact",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "day",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "month",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "duration",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "campaign",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pdays",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "previous",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "poutcome",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "deposit",
+    "type": "BOOL"
+  } 
 ]
