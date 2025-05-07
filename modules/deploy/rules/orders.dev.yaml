@@ -15,52 +15,85 @@
 samplingPercent: 100
 rowFilter:
 rules:
-  - column: order_id
+  - column: age
     dimension: COMPLETENESS
     name: non-null
-    description: Sample rule for non-null column
+    description: non-null column
     threshold: 1.0
     non_null_expectation: {}
-  - column: user_id
+  - column: balance
     dimension: COMPLETENESS
     name: non-null
-    description: Sample rule for non-null column
+    description: non-null column
     threshold: 1.0
     non_null_expectation: {}
-  - column: created_at
-    description: Sample rule for non-null column
+  - column: education
     dimension: COMPLETENESS
     name: non-null
+    description: non-null column
     threshold: 1.0
     non_null_expectation: {}
-  - column: order_id
-    dimension: UNIQUENESS
-    name: unique
-    description: Sample rule for unique column
-    uniqueness_expectation: {}
-  - column: status
+  - column: education
     dimension: VALIDITY
-    name: one-of-set
-    description: Sample rule for values in a set
+    name: one-of-set-education
+    description: rule for values in a set
     ignore_null: false
     set_expectation:
       values:
-      - Shipped
-      - Complete
-      - Processing
-      - Cancelled
-      - Returned
-  - column: num_of_item
+      - secondary
+      - tertiary
+      - primary
+      - unknown
+  - column: education
     dimension: VALIDITY
-    name: range-values
-    description: Sample rule for values in a range
+    name: not-valid-education
+    description:  rule for sql query
+    tableConditionExpectation:
+      sqlExpression: (LENGTH(`education`) >= 7 AND LENGTH(`education`) <= 9) OR `education` IS NULL
+  - column: job
+    dimension: COMPLETENESS
+    name: non-null
+    description: non-null column
+    threshold: 1.0
+    non_null_expectation: {}
+  - column: job
+    dimension: VALIDITY
+    name: one-of-set-job
+    description: rule for values in a set
     ignore_null: false
-    threshold: 0.99
-    range_expectation:
-      max_value: '1'
-      # min_value:
-      strict_max_enabled: false
-      strict_min_enabled: false
+    set_expectation:
+      values:
+      - management
+      - technician
+      - blue-collar
+      - admin.
+      - retired
+      - services
+      - self-employed
+      - unemployed
+      - student
+      - entrepreneur
+  - column: job
+    dimension: VALIDITY
+    name: not-valid-job
+    description:  rule for sql query
+    tableConditionExpectation:
+      sqlExpression: (LENGTH(`job`) >= 6 AND LENGTH(`job`) <= 13) OR `job` IS NULL
+  - column: loan
+    dimension: COMPLETENESS
+    name: non-null-loan
+    description: non-null column
+    threshold: 1.0
+    non_null_expectation: {}
+  - column: loan
+    dimension: VALIDITY
+    name: one-of-set-loan
+    description: rule for values in a set
+    ignore_null: false
+    set_expectation:
+      values:
+      - true
+      - false
   - dimension: VALIDITY
     name: not-empty-table
     description: Sample rule for a non-empty table
